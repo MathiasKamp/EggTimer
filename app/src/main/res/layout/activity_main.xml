@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Btn_SoftBoiledEgg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Btn_SoftBoiled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="onButtonEggSelected"
+        android:text="soft"
+        app:layout_constraintEnd_toStartOf="@+id/Btn_MediumEgg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_HeadLine" />
+
+    <Button
+        android:id="@+id/Btn_HardBoiled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onButtonEggSelected"
+        android:text="hard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toEndOf="@+id/Btn_MediumEgg"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_HeadLine" />
+
+    <Button
+        android:id="@+id/Btn_MediumEgg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onButtonEggSelected"
+        android:text="Medium"
+        app:layout_constraintEnd_toStartOf="@+id/Btn_HardBoiled"
+        app:layout_constraintStart_toEndOf="@+id/Btn_SoftBoiled"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_HeadLine" />
+
+    <TextView
+        android:id="@+id/Tv_Timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="254dp"
+        android:text="00:00"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_MediumEgg" />
+
+    <Button
+        android:id="@+id/Btn_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:enabled="true"
+        android:onClick="onButtonStart"
+        android:text="Start"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_Timer" />
+
+    <TextView
+        android:id="@+id/Tv_HeadLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="Choose an egg"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_MediumEgg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
